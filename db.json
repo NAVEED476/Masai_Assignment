@@ -1,0 +1,29 @@
+{
+  "data": [
+    {
+      "country_name": "india",
+      "state_name": "banglore",
+      "population": "1234",
+      "id": 1
+    },
+    
+    {
+      "country_name": "Australia",
+      "state_name": "abc",
+      "population": "23424",
+      "id": 3
+    },
+    {
+      "country_name": "USA",
+      "state_name": "skan",
+      "population": "3864",
+      "id": 4
+    },
+    {
+      "country_name": "UK",
+      "state_name": "a,hd",
+      "population": "3649",
+      "id": 5
+    }
+  ]
+}

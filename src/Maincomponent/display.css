@@ -1,0 +1,23 @@
+body{
+    background-color: aliceblue;
+
+}
+
+.country{
+    font-weight: bold;
+    font-style: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 32px;
+    color: blue;
+    margin-top: 20px;
+}
+
+.reactbutton{
+    color: red;
+    font-size: large;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    margin-bottom: 20px;
+    color: white;
+}

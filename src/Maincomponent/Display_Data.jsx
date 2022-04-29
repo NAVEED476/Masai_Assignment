@@ -14,7 +14,8 @@ import { deletedusers, loadusers } from "../redux/action";
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button'
 import Home from "../components/Home";
-import "./form.css"
+
+import "./display.css"
 
 // import { Link } from "react-router-dom";
 
@@ -72,9 +73,9 @@ const Display_Data = () => {
   return (
     <div>
 
-      <h1>Country Details</h1>
+      <h1 className="country">Country Details</h1>
 
-      <Button className="reactbutton"> <Link to="/add">Add Country</Link></Button>
+      <button className="reactbutton"> <Link to="/add">Add Country</Link></button>
 
       
 

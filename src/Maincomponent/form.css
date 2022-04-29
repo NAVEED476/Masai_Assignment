@@ -1,0 +1,14 @@
+.formhandle{
+    margin-left: 100px;
+    margin-bottom:100px ;
+   
+}
+.botton{
+    margin-top: 20px;
+}
+
+.reactbutton{
+    background-color: blue;
+    color: white;
+    padding: 4px 5px;
+}

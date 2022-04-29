@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
+import "./home.css"
 
 const Home = () => {
     const [country, setcountry] = useState("")
@@ -18,7 +19,7 @@ const Home = () => {
     const handlesubmit = (e) => {
         e.preventDefault();
 
-        if (country == "" || state == "" || number == "") {
+        if (country === "" || state === "" || number === "") {
             alert("all fields required")
         }
 
@@ -33,7 +34,7 @@ const Home = () => {
                 headers: {
                     "content-Type": "application/json"
                 }
-            }).then(getdata).then(filterdata)
+            }).then(getdata)
             setcountry("")
             setstate("")
             setnumber("")
@@ -54,36 +55,36 @@ const Home = () => {
         
     }
 
-    const filterdata = () =>{
-        fetch(`http://localhost:3001/data?country_name=${country}`,
-        {
-            method:"PUT",
+    // const filterdata = () =>{
+    //     fetch(`http://localhost:3001/data?country_name=${country}`,
+    //     {
+    //         method:"PUT",
             
-            headers: {
-                'content-Type': 'application/json'
-              },
-              body: JSON.stringify({
-                country_name:country,
-              })
-        }
-        ).then(response => response.json())
-        .then(data => {
-          if (data.country_name === country) {
-            alert("The Country data  is  Already Exist, Go to page and edit the details ")
-          }
-        })
-    }
+    //         headers: {
+    //             'content-Type': 'application/json'
+    //           },
+    //           body: JSON.stringify({
+    //             country_name:country,
+    //           })
+    //     }
+    //     ).then(response => response.json())
+    //     .then(data => {
+    //       if (data.country_name === country) {
+    //         alert("The Country data  is  Already Exist, Go to page and edit the details ")
+    //       }
+    //     })
+    // }
     return (
 
-        <div>
-            <h1>Home</h1>
+        <div className="formhandler">
+            <h1>Add Data</h1>
 
-            <form onSubmit={handlesubmit}>
-                <span>Country Name</span>
+            <form onSubmit={handlesubmit} >
+                <span>Country Name</span><br />
                 <input type="text" value={country} onChange={(e) => { setcountry(e.target.value) }} /><br />
-                <span>City Name</span>
+                <span>City Name</span><br />
                 <input type="text" value={state} onChange={(e) => { setstate(e.target.value) }} /><br />
-                <span>Population</span>
+                <span>Population</span><br />
                 <input type="number" value={number} onChange={(e) => { setnumber(e.target.value) }} /><br />
                 <input type="submit" />
             </form>

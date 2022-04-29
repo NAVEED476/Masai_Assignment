@@ -5,14 +5,30 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
-import {store} from "./redux/store"
+import { store } from "./redux/store"
+import Home from './components/Home';
+import Display_Data from './Maincomponent/Display_Data';
+import Edit from './Maincomponent/Edit';
+import Add from './Maincomponent/Adduser';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Provider store={store}>
       <React.StrictMode>
-        <App />
+
+       
+       
+       {/* <Home/> */}
+       {/* <Add/> */}
+       
+       
+       {/* <Display_Data/> */}
+
+       <App />
+
+      
+
       </React.StrictMode>
     </Provider>
   </BrowserRouter>
